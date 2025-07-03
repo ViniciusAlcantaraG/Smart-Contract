@@ -11,7 +11,6 @@ describe("UniversityEnrollment", function () {
     [owner, student1, student2] = await ethers.getSigners();
     const UniversityEnrollment = await ethers.getContractFactory("UniversityEnrollment");
     contract = await UniversityEnrollment.deploy();
-    await contract.deployed();
   });
 
   it("should create a course", async function () {
