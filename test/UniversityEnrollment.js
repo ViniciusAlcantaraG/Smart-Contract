@@ -16,7 +16,7 @@ describe("UniversityEnrollment", function () {
   it("should create a course", async function () {
     await contract.createCourse("Calculo", "MAE128", 2);
     const course = await contract.courses(0);
-    expect(course.name).to.equal("Math");
+    expect(course.name).to.equal("Calculo");
     expect(course.maxStudents).to.equal(2);
     expect(course.code).to.equal("MAE128");
     expect(course.enrolledCount).to.equal(0);
