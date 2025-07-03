@@ -16,7 +16,7 @@ contract UniversityEnrollment {
     event CourseCreated(uint courseId, string name, string code, uint maxStudents);
     event Enrolled(address student, uint courseId);
 
-    function createCourse(string memory _name, string _code, uint _maxStudents) public {
+    function createCourse(string memory _name, string memory _code, uint _maxStudents) public {
         require(_maxStudents > 0, "Max students must be greater than 0");
         Course storage c = courses[courseCount];
         c.name = _name;
